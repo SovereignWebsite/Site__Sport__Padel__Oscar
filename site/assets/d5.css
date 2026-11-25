@@ -11,3 +11,5 @@ h1{font-size:clamp(2rem,8vw,3.2rem)}
 .step{font-size:.8rem;color:var(--accent);font-weight:700}
 .fixbar{position:fixed;left:0;right:0;bottom:0;z-index:40;padding:.7rem 1rem;background:var(--bg);border-top:2px solid var(--accent);text-align:center}
 .fixbar .btn{width:100%;max-width:26rem;text-align:center}
+.cards .court.mini{border-radius:8px;margin-bottom:.6rem}
+.cards .offer{box-shadow:0 8px 0 var(--accent)}

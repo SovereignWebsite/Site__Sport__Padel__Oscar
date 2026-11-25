@@ -13,7 +13,9 @@ Surname, where he coaches, qualifications (including any "Level 2" claim), price
 
 ## Open
 - Round 1 review by a.design requested.
-- Not yet tested: axe at 1366 px and with the picker open; the stylesheet-blocked check; the screenshots are committed, not made in CI.
+- Tested (own script, 25 Nov): axe WCAG 2.2 AA clean on d1 to d5, /designs/ and /interview/ at 390 and 1366 px, light and dark, picker open and closed; no sideways scroll at 390; all pages under 8,000 px; thumbnails keep their size with stylesheets blocked. The screenshots are committed, not made in CI.
+- Round 2 done (own review). a.design's round 1 review still not received.
+- Ideas for online work: docs/keeper/ideas.md.
 - The picker is on my own pages only, not on the seeded /start/, /agents/, /admin/, /policy/.
 - Photo is small (760 x 465): design 3 shows it soft. Better originals from Oscar would help.
 - Need from Oscar: originals, other people's agreement, whether the club name may appear, his full name.

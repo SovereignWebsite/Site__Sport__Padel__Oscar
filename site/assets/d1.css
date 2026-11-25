@@ -12,3 +12,10 @@ h1{font-size:clamp(2.2rem,8vw,3.6rem)}
 .offer h3{margin:0 0 .3rem}.offer p{margin:0;color:var(--muted)}
 .contact{background:rgba(11,95,208,.08);border-radius:12px}
 main>section.contact{margin-top:1rem}
+.portrait.framed img{box-shadow:10px 10px 0 var(--court)}
+.strip{max-width:64rem;margin:0 auto;padding:.5rem 1rem 0}
+.strip .court{max-height:150px;border-radius:12px}
+.hero-text .btn{box-shadow:0 6px 0 rgba(0,0,0,.18)}
+.offer{position:relative;overflow:hidden}
+.offer::before{content:"";position:absolute;left:0;top:0;bottom:0;width:6px;background:var(--court)}
+.portrait.framed{padding:0 10px 10px 0}

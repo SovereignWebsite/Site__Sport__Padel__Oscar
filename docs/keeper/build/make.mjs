@@ -31,7 +31,7 @@ const shot = (d, dark) => `/assets/designs/d${d.n}${dark ? '-dark' : ''}.jpg`;
 
 function head(ctx, { title, desc, url }) {
   const full = `${S.url}${url}`, img = `${S.url}/assets/share/card-1200x630.jpg`;
-  const css = ['base', 'picker', ctx.n === 'designs' ? 'designs' : `d${ctx.n}`].map((f) => `<link rel="stylesheet" href="/assets/${f}.css">`).join('\n');
+  const css = ['theme', 'base', 'picker', ctx.n === 'designs' ? 'designs' : `d${ctx.n}`].map((f) => `<link rel="stylesheet" href="/assets/${f}.css">`).join('\n');
   return `<!doctype html>
 <html lang="en-GB">
 <head>
@@ -112,6 +112,8 @@ function foot(ctx) {
 </footer>`;
 }
 
+const court = (cls = '', path = '') => `<svg class="court ${cls}" viewBox="0 0 200 100" width="200" height="100" aria-hidden="true" focusable="false"><rect class="cf" width="200" height="100" rx="4" fill="#1b4f9c"/><g class="cl" fill="none" stroke="#ffffff" stroke-width="1.2"><rect x="6" y="6" width="188" height="88"/><line x1="100" y1="6" x2="100" y2="94"/><line x1="55" y1="6" x2="55" y2="94"/><line x1="145" y1="6" x2="145" y2="94"/><line x1="55" y1="50" x2="145" y2="50"/></g>${path ? `<path class="route" d="${path}" fill="none" stroke="#d6f23a" stroke-width="2" stroke-dasharray="4 3" stroke-linecap="round"/>` : ''}<circle class="ball" cx="150" cy="30" r="3.4" fill="#d6f23a"/></svg>`;
+const ROUTES = ['M40 70 L100 30 L160 70', 'M30 30 L80 70 L130 40 L170 60', 'M100 80 L100 50 L150 25'];
 const igBtn = (cls = 'btn') => `<a class="${cls}" href="${IG}" rel="noopener">Message Oscar on Instagram</a>`;
 const portrait = (cls = '') => `<figure class="portrait ${cls}"><img src="${photo.file}" width="${photo.width}" height="${photo.height}" alt="${esc(photo.alt)}"><figcaption>${esc(photo.credit)}</figcaption></figure>`;
 const offerItems = (tag = 'li', wrap = (o, i) => `<h3>${esc(o.title)}</h3><p>${esc(o.text)}</p>`) =>
@@ -130,8 +132,9 @@ const HOME = {
     <p class="lead">${esc(P.years_text)}. ${esc(P.tagline)}</p>
     <p>${igBtn()}</p>
   </div>
-  ${portrait()}
+  ${portrait('framed')}
 </section>
+<div class="strip">${court()}</div>
 <section id="offer" class="band"><h2>What Oscar offers</h2><ul class="offers">${offerItems()}</ul></section>
 <section id="about" class="band"><h2>About Oscar</h2>${aboutText}</section>
 <section id="contact" class="band contact"><h2>Get in touch</h2>${contactBlock}</section>`,
@@ -147,9 +150,9 @@ const HOME = {
   </ul>
   <p>${igBtn()}</p>
 </section>
-<section id="offer"><h2>The line-up</h2><ol class="offers">${offerItems('li', (o, i) => `<span class="num">${i + 1}</span><span><strong>${esc(o.title)}</strong><br>${esc(o.text)}</span>`)}</ol></section>
+<section id="offer"><h2>The score</h2><ol class="offers">${offerItems('li', (o, i) => `<span class="num">${['15', '30', '40'][i] || i + 1}</span><span><strong>${esc(o.title)}</strong><br>${esc(o.text)}</span>`)}</ol></section>
 <section id="about"><h2>About Oscar</h2>${aboutText}${portrait('small')}</section>
-<section id="contact" class="contact"><h2>Get in touch</h2>${contactBlock}</section>`,
+<section id="contact" class="contact"><h2><span class="game">Game.</span> Get in touch</h2>${contactBlock}</section>`,
 
   3: () => `<section class="cover">
   <img class="cover-img" src="${photo.file}" width="${photo.width}" height="${photo.height}" alt="${esc(photo.alt)}">
@@ -159,6 +162,7 @@ const HOME = {
     <p>${igBtn()}</p>
   </div>
 </section>
+<div class="ticker" aria-hidden="true"><span>${c.offers.map((o) => esc(o.title)).join(' &middot; ')} &middot; ${c.offers.map((o) => esc(o.title)).join(' &middot; ')} &middot; </span></div>
 <section id="offer"><h2>What Oscar offers</h2><ul class="offers">${offerItems('li', (o) => `<strong>${esc(o.title)}</strong><span>${esc(o.text)}</span>`)}</ul></section>
 <section id="about"><h2>About</h2>${aboutText}<p class="credit">${esc(photo.credit)}</p></section>
 <section id="contact" class="contact"><h2>Get in touch</h2>${contactBlock}</section>`,
@@ -178,7 +182,7 @@ const HOME = {
   <p class="lead">${esc(P.years_text)}. ${esc(P.tagline)}</p>
 </section>
 <section id="offer" aria-labelledby="offer-h"><h2 id="offer-h">What Oscar offers <span class="hint">Swipe for more</span></h2>
-  <ul class="cards" tabindex="0" aria-label="Services, scroll sideways">${offerItems('li', (o, i) => `<span class="step">${i + 1} of ${c.offers.length}</span><h3>${esc(o.title)}</h3><p>${esc(o.text)}</p>`)}</ul>
+  <ul class="cards" tabindex="0" aria-label="Services, scroll sideways">${offerItems('li', (o, i) => `${court('mini', ROUTES[i % 3])}<span class="step">${i + 1} of ${c.offers.length}</span><h3>${esc(o.title)}</h3><p>${esc(o.text)}</p>`)}</ul>
 </section>
 <section id="about"><h2>About Oscar</h2>${aboutText}${portrait()}</section>
 <section id="contact" class="contact"><h2>Get in touch</h2><p>${esc(c.contact.text)}</p><p class="handle">@${esc(P.instagram.handle)} on Instagram</p></section>
@@ -212,7 +216,8 @@ ${foot(ctx)}
 `;
 }
 
-const write = (f, s) => { mkdirSync(dirname(f), { recursive: true }); writeFileSync(f, s); };
+const write = (f, s) => { mkdirSync(dirname(f), { recursive: true }); writeFileSync(f, f.endsWith('.html') && P.first_name !== 'Oscar' ? s.replaceAll('Oscar', P.first_name) : s); };
+write('site/assets/theme.css', `:root{--court:${c.theme.court};--ball:${c.theme.ball}}\n`);
 for (const d of DESIGNS) {
   const live = d.n === 1;
   const ctx = { n: d.n, live, base: live ? '/' : `/d/${d.n}/` };
@@ -260,7 +265,7 @@ ${DESIGNS.map((d) => `<tr><th scope="row"><a href="${d.n === 1 ? '/' : `/d/${d.n
 </ol>
 <p>Then say which number to keep.</p>
 <h2>Rounds</h2>
-<ul><li><strong>${TAKEN}, round 1, keeper.</strong> Five first designs built from one data file, all with the same content. Review by a.design requested.</li></ul>
+<ul><li><strong>${TAKEN}, round 2, keeper.</strong> Took each design further: a drawn padel court with a moving ball (still when reduced motion is on), a framed photo and court strip in 1, scoreboard points 15, 30, 40 and a Game section in 2, a duotone photo and ticker in 3, small-caps headings and a print layout in 4, court-diagram drill cards in 5. Coach colours now come from one theme in the data file. Review by a.design requested for round 1, not yet received.</li><li><strong>${TAKEN}, round 1, keeper.</strong> Five first designs built from one data file, all with the same content. Review by a.design requested.</li></ul>
 <h2>Earlier designs</h2>
 <p>None yet.</p>
 <h2 id="dark">The five in dark</h2>
