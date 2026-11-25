@@ -1,0 +1,16 @@
+:root{--bg:#0b0b0b;--fg:#f2f2f2;--muted:#b9b9b2;--accent:#c6f432;--link:#c6f432;--btn-bg:#c6f432;--btn-fg:#0b0b0b;--line:#333;--focus:#c6f432}
+/* Dark first, and dark throughout: this design is a dark one. */
+:root{color-scheme:dark}
+body{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+h1{font-size:clamp(1.6rem,6vw,2.4rem);text-transform:uppercase;letter-spacing:.02em}
+h2{text-transform:uppercase;font-size:1rem;letter-spacing:.12em;color:var(--accent)}
+.kicker{margin:0;color:var(--muted);text-transform:uppercase;letter-spacing:.15em;font-size:.8rem}
+.tiles{list-style:none;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:.6rem}
+@media (min-width:700px){.tiles{grid-template-columns:repeat(4,1fr)}}
+.tiles li{border:2px solid var(--line);border-radius:6px;padding:.7rem;display:flex;flex-direction:column;font-size:.85rem;color:var(--muted)}
+.tiles .big{font-size:2.2rem;font-weight:800;line-height:1;color:var(--fg)}
+.offers{list-style:none;padding:0}
+.offer{display:flex;gap:1rem;padding:.8rem 0;border-top:2px solid var(--line)}
+.num{font-size:2rem;font-weight:800;color:var(--accent);min-width:2rem}
+.portrait.small{max-width:20rem}
+.btn{border-radius:4px;text-transform:uppercase;letter-spacing:.04em}

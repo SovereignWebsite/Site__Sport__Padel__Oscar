@@ -1,0 +1,76 @@
+{
+  "site": {
+    "name": "Oscar, padel coach",
+    "url": "https://oscar.padel.sport.sovereignweb.site",
+    "locale": "en-GB",
+    "description": "Oscar is a padel coach and personal trainer with 10+ years of coaching experience. Message him on Instagram."
+  },
+  "coach": {
+    "first_name": "Oscar",
+    "surname": null,
+    "surname_note": "Not shown until Oscar confirms his full name for the site.",
+    "role": "Padel coach and personal trainer",
+    "years": "10+",
+    "years_text": "10+ years of coaching experience",
+    "tagline": "Move, feel and perform better.",
+    "tagline_source": "The line on his public Instagram profile.",
+    "instagram": { "handle": "oscar.pt.padel", "url": "https://www.instagram.com/oscar.pt.padel" }
+  },
+  "offers": [
+    { "id": "coaching", "title": "Padel coaching", "text": "Coaching on the padel court." },
+    { "id": "performance", "title": "Padel performance", "text": "Training for how you move and perform on court." },
+    { "id": "pt", "title": "Personal training", "text": "Personal training in the gym." }
+  ],
+  "contact": {
+    "method": "Instagram messages",
+    "text": "For now, message Oscar on Instagram. There is no online booking, no prices and no timetable on this site yet."
+  },
+  "photos": [
+    {
+      "file": "/assets/img/oscar-portrait.jpg",
+      "width": 760,
+      "height": 465,
+      "alt": "Oscar in a gym, in a lunge stretch, wearing a light blue training top.",
+      "credit": "Photo from Oscar's public Instagram, used with his agreement (said by Dinis Cruz, 25 November 2026). Cropped to remove the app controls."
+    }
+  ],
+  "not_yet": ["full name", "where he coaches", "qualifications", "prices", "availability", "booking", "testimonials", "other people in photos"],
+  "interview": [
+    { "title": "Where you coach", "questions": [
+      "Do you coach at one place or several? Please name them.",
+      "Are you happy for the site to say where you coach, and may it name the club?",
+      "Do you travel to coach, or coach at private courts?"] },
+    { "title": "Levels and groups", "questions": [
+      "Who do you coach: beginners, improvers, advanced players, juniors, adults?",
+      "Do you offer one-to-one, pairs, small groups, or all of these?",
+      "Do you run clinics, camps or classes? How would you describe each?"] },
+    { "title": "Padel performance and personal training", "questions": [
+      "What does a padel performance session involve, in your own words?",
+      "What does personal training with you involve, and who is it for?",
+      "Do you combine court and gym work for the same person?"] },
+    { "title": "Prices and booking", "questions": [
+      "Do you want prices on the site, or only on request?",
+      "How do you want people to book: message you, a booking page, through a club?",
+      "Do you want to take payments through the site, or not?"] },
+    { "title": "Availability", "questions": [
+      "Which days and times do you usually coach?",
+      "Should the site show a timetable, or just say \"message to ask\"?"] },
+    { "title": "Achievements and qualifications", "questions": [
+      "Which coaching qualifications do you hold? Please give each exact name.",
+      "Are there results, rankings or playing history you want mentioned?",
+      "Is there anything you do not want mentioned?"] },
+    { "title": "Fundraising", "questions": [
+      "What fundraising have you done, and for which cause?",
+      "Do you want a page for it, and a link where people can give?",
+      "Who should be thanked by name, and have they agreed?"] },
+    { "title": "Photos and video", "questions": [
+      "Which photos and videos do you want on the site?",
+      "Has everyone who appears in them agreed to be on your site?",
+      "Should any club names or logos in the pictures be cropped out?",
+      "Your Instagram has Food, Gym and Fundraising highlights. Do you want a page for any of them?"] },
+    { "title": "Your name and how people reach you", "questions": [
+      "Do you want your full name on the site?",
+      "Which contact method do you want: Instagram messages, WhatsApp, email, phone?",
+      "Is there a line or short story about you that you would like at the top of the home page?"] }
+  ]
+}

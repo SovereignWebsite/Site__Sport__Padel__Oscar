@@ -1,0 +1,22 @@
+.pbar{position:relative;background:#f1f1ee;color:#1a1a1a;border-bottom:1px solid #cfcfc9;font:15px/1.4 system-ui,-apple-system,Segoe UI,sans-serif;min-height:44px;z-index:60}
+@media (prefers-color-scheme:dark){.pbar{background:#1d1d1b;color:#eee;border-color:#3a3a36}}
+.picker{display:block}
+.picker>summary{display:inline-flex;align-items:center;gap:.4rem;min-height:44px;padding:0 .9rem;cursor:pointer;font-weight:700;list-style:none;color:inherit}
+.picker>summary::-webkit-details-marker{display:none}
+.picker>summary::after{content:"";width:.4rem;height:.4rem;border:solid currentColor;border-width:0 2px 2px 0;transform:rotate(45deg) translateY(-2px)}
+.picker[open]>summary::after{transform:rotate(225deg)}
+.ppanel{position:absolute;left:0;right:0;top:100%;max-height:min(80vh,40rem);overflow:auto;background:#fff;color:#1a1a1a;border-bottom:1px solid #cfcfc9;box-shadow:0 8px 24px rgba(0,0,0,.2);padding:.75rem}
+@media (prefers-color-scheme:dark){.ppanel{background:#1d1d1b;color:#eee;border-color:#3a3a36}}
+.ppanel ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:.6rem}
+@media (min-width:900px){.ppanel ul{grid-template-columns:repeat(5,1fr)}}
+.pcard{display:flex;flex-direction:column;gap:.3rem;min-height:44px;height:100%;padding:.5rem;border:2px solid transparent;border-radius:10px;color:inherit;text-decoration:none;background:rgba(127,127,127,.1)}
+.pcard:hover,.pcard:focus-visible{border-color:#6b6b66}
+.pcard[aria-current=page]{border-color:#0b5fd0}
+@media (prefers-color-scheme:dark){.pcard[aria-current=page]{border-color:#7fb2ff}}
+.pcard img{width:100%;height:auto;max-width:117px;margin:0 auto;border-radius:6px;border:1px solid rgba(127,127,127,.4)}
+.pname{font-weight:700}
+.pidea{font-size:.8rem;color:#55554f}
+@media (prefers-color-scheme:dark){.pidea{color:#b8b8b0}}
+.pall{display:inline-flex;align-items:center;min-height:44px;margin-top:.6rem;font-weight:700;color:inherit}
+.pnote{margin:0;padding:.35rem .9rem;border-top:1px solid rgba(127,127,127,.3);font-size:.85rem}
+.pnote a{color:inherit}

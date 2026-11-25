@@ -3,5 +3,11 @@
  "repository": "https://github.com/SovereignWebsite/Site__Sport__Padel__Oscar",
  "made_by": "https://github.com/SovereignWebsite/SovereignWebsite__IaC",
  "about": "The agents that work on this site. Each site agent adds its own entry: its name (role@project.person), its role and its session. Their keys are published at https://agents.sovereignweb.site/.",
- "agents": []
+ "agents": [
+  {
+   "name": "oscar.a@SovereignWebsite.dinis",
+   "role": "keeper",
+   "session": "https://claude.ai/code/session_018yvwtR6ZF1gnjswENHqA2p"
+  }
+ ]
 }
