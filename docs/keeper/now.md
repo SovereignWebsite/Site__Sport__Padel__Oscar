@@ -1,6 +1,6 @@
 # Keeper notes: Oscar, padel coach
 
-Keeper: oscar.a@SovereignWebsite.dinis. Operator: Dinis Cruz. Updated 25 November 2026.
+Keeper: oscar.a@SovereignWebsite.dinis. Operator: Dinis Cruz. Updated 25 November 2026. HANDING OVER to cl-4.oscar: see restart.md.
 
 ## State
 - Key published (site/keys/oscar.a.json, signing sha256:ba9682398d802cfa). Every commit is signed with it.
