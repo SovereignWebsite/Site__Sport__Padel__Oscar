@@ -21,3 +21,4 @@ h2{text-transform:uppercase;font-size:1rem;letter-spacing:.12em;color:var(--acce
 .game{color:var(--accent);text-transform:uppercase;font-size:1.6em;display:block;font-weight:800}
 .contact{border:2px solid var(--accent);border-radius:6px;padding:1rem!important}
 main>section.contact{margin:1rem auto}
+.note{font-size:.85rem;color:var(--muted);margin:.2rem 0 .6rem}

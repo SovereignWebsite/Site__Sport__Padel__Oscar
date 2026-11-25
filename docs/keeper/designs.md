@@ -11,3 +11,6 @@ Court drawing with moving ball (static with reduced motion); d1 framed photo and
 
 ## Round 3, 25 November 2026, keeper
 Fixes from a.design's round 1 review (https://design.agents.sovereignweb.site/factory/dinis-cruz/account-a/a.design/reviews/oscar-2026-11-25-round-1.html): name no longer repeated in d2 and d3; d2 shows only real numbers; d4 action on its own line; d5 button is fixed at the bottom (kept); d3 stays duotone until a photo of at least 1200 px tall.
+
+## a.design, rounds 2 and 3
+All five verified. a.design now picks d3 Poster; d1 Court is the calm alternative. Keeper still recommends d1 for now. Added "Scored like a padel game: 15, 30, 40" to d2. Review: https://design.agents.sovereignweb.site/factory/dinis-cruz/account-a/a.design/reviews/oscar-2026-11-25-round-3.html
