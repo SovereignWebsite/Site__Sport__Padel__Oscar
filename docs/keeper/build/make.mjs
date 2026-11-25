@@ -140,13 +140,10 @@ const HOME = {
 <section id="contact" class="band contact"><h2>Get in touch</h2>${contactBlock}</section>`,
 
   2: () => `<section class="top">
-  <p class="kicker">${esc(P.first_name)}</p>
   <h1>Oscar, padel coach</h1>
   <ul class="tiles">
     <li><span class="big">${esc(P.years)}</span><span>years of coaching experience</span></li>
-    <li><span class="big">Padel</span><span>coach</span></li>
-    <li><span class="big">PT</span><span>personal trainer</span></li>
-    <li><span class="big">3</span><span>things he offers, below</span></li>
+    <li><span class="big">${c.offers.length}</span><span>things he offers, below</span></li>
   </ul>
   <p>${igBtn()}</p>
 </section>
@@ -158,7 +155,7 @@ const HOME = {
   <img class="cover-img" src="${photo.file}" width="${photo.width}" height="${photo.height}" alt="${esc(photo.alt)}">
   <div class="cover-text">
     <h1>Oscar<span>padel coach</span></h1>
-    <p class="lead">${esc(P.role)}. ${esc(P.years_text)}.</p>
+    <p class="lead">Personal trainer. ${esc(P.years_text)}.</p>
     <p>${igBtn()}</p>
   </div>
 </section>
@@ -170,7 +167,8 @@ const HOME = {
   4: () => `<section>
   <h1>Oscar, padel coach</h1>
   <p class="lead">${esc(P.role)}, with ${esc(P.years_text)}. ${esc(P.tagline)}</p>
-  <p>${esc(c.contact.text)} ${instagramLink}.</p>
+  <p>${esc(c.contact.text)}</p>
+  <p>${igBtn()}</p>
 </section>
 <section id="offer"><h2>What Oscar offers</h2><dl class="offers">${c.offers.map((o) => `<dt>${esc(o.title)}</dt><dd>${esc(o.text)}</dd>`).join('')}</dl></section>
 <section id="about"><h2>About Oscar</h2>${aboutText}${portrait('small')}</section>
@@ -265,7 +263,7 @@ ${DESIGNS.map((d) => `<tr><th scope="row"><a href="${d.n === 1 ? '/' : `/d/${d.n
 </ol>
 <p>Then say which number to keep.</p>
 <h2>Rounds</h2>
-<ul><li><strong>${TAKEN}, round 2, keeper.</strong> Took each design further: a drawn padel court with a moving ball (still when reduced motion is on), a framed photo and court strip in 1, scoreboard points 15, 30, 40 and a Game section in 2, a duotone photo and ticker in 3, small-caps headings and a print layout in 4, court-diagram drill cards in 5. Coach colours now come from one theme in the data file. Review by a.design requested for round 1, not yet received.</li><li><strong>${TAKEN}, round 1, keeper.</strong> Five first designs built from one data file, all with the same content. Review by a.design requested.</li></ul>
+<ul><li><strong>${TAKEN}, round 3, keeper, on a.design's round 1 review.</strong> Scoreboard no longer repeats the name and shows only real numbers (10+ years, 3 offers). Poster's lead no longer repeats the name and role. Plain page's Instagram action has its own line. Drill cards keeps its button fixed at the bottom of the screen, so it is on every first screen; if a.design still reads that as missing, I will add it inline too. Poster stays a duotone until a photo at least 1200 px tall arrives.</li><li><strong>${TAKEN}, round 2, keeper.</strong> Took each design further: a drawn padel court with a moving ball (still when reduced motion is on), a framed photo and court strip in 1, scoreboard points 15, 30, 40 and a Game section in 2, a duotone photo and ticker in 3, small-caps headings and a print layout in 4, court-diagram drill cards in 5. Coach colours now come from one theme in the data file. Review by a.design requested for round 1, not yet received.</li><li><strong>${TAKEN}, round 1, keeper.</strong> Five first designs built from one data file, all with the same content. Review by a.design requested.</li></ul>
 <h2>Earlier designs</h2>
 <p>None yet.</p>
 <h2 id="dark">The five in dark</h2>

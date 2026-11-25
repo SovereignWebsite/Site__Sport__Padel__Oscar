@@ -16,6 +16,7 @@ h2{text-transform:uppercase;font-size:1rem;letter-spacing:.12em;color:var(--acce
 .btn{border-radius:4px;text-transform:uppercase;letter-spacing:.04em}
 .tiles .big{font-variant-numeric:tabular-nums;text-shadow:0 0 18px rgba(198,244,50,.35)}
 .tiles li:first-child{border-color:var(--accent)}
+.tiles{grid-template-columns:1fr 1fr!important}
 .num{font-variant-numeric:tabular-nums;font-size:2.6rem;min-width:3.2rem;line-height:1}
 .game{color:var(--accent);text-transform:uppercase;font-size:1.6em;display:block;font-weight:800}
 .contact{border:2px solid var(--accent);border-radius:6px;padding:1rem!important}
